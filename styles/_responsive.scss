@@ -5,10 +5,31 @@
   }
 }
 
-@media (max-width: 1000px){
-    .home-image{
-        height: 90% !important;
+@media (max-width: 1100px) {
+  .home-image {
+    height: 90% !important;
+
+    &::before {
+      font-size: 120px !important;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-image {
+    &::before {
+      font-size: 100px !important;
+    }
+  }
+
+  .footer-c {
+    grid-template-columns: 1fr !important;
+    row-gap: 40px;
+  }
+
+  .cart-wrapper {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (max-width: 550px) {
@@ -34,6 +55,12 @@
       &.open {
         clip-path: circle(144% at 0% 0%);
       }
+    }
+  }
+
+  .home-image {
+    &::before {
+      font-size: 80px !important;
     }
   }
 }

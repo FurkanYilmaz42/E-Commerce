@@ -62,9 +62,24 @@ header div #cart-icon::after {
     margin: 0 auto;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .home-image {
     height: 90% !important;
+  }
+  .home-image::before {
+    font-size: 120px !important;
+  }
+}
+@media (max-width: 768px) {
+  .home-image::before {
+    font-size: 100px !important;
+  }
+  .footer-c {
+    grid-template-columns: 1fr !important;
+    row-gap: 40px;
+  }
+  .cart-wrapper {
+    grid-template-columns: 1fr !important;
   }
 }
 @media (max-width: 550px) {
@@ -89,6 +104,9 @@ header div #cart-icon::after {
   header nav.open {
     -webkit-clip-path: circle(144% at 0% 0%);
             clip-path: circle(144% at 0% 0%);
+  }
+  .home-image::before {
+    font-size: 80px !important;
   }
 }
 .home {
@@ -121,6 +139,184 @@ header div #cart-icon::after {
   white-space: nowrap;
 }
 
+.products h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 64px;
+}
+.products .product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+.products .product-container .product img {
+  width: 100%;
+  height: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.products .product-container .product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.products .product-container .product-info h2 {
+  font-size: 25px;
+  color: #000;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.products .product-container .product-info p {
+  font-size: 20px;
+  color: #273ea1;
+  font-weight: 500;
+  margin: 15px 0;
+}
+.products .product-container .product-info a {
+  background-color: #273ea1;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.footer {
+  background-color: #273ea1;
+  margin-top: 50px;
+  padding: 40px 10px;
+}
+.footer-c {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 16px;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-box h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 128px;
+}
+.footer-box .social {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.footer-box .social a {
+  background-color: #ffffff;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 50%;
+}
+.footer-box .social a i {
+  color: #273ea1;
+}
+.footer-box h3 {
+  color: #ffffff;
+  font-size: 25px;
+}
+.footer-box ul {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.footer-box ul a {
+  color: #ffffff;
+}
+.footer .copyright {
+  padding: 50px;
+  color: #ffffff;
+}
+
+.cart-container {
+  margin-top: 100px !important;
+}
+.cart-container .back-icon {
+  display: flex;
+  align-items: center;
+  color: #000;
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 20px;
+}
+.cart-container .cart-title {
+  margin: 30px 0;
+  font-size: 45px;
+}
+.cart-container .cart-wrapper {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 20px;
+}
+.cart-container .cart-wrapper .cart-items .cart-item {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 0.5fr 0.5fr;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(227, 227, 227);
+}
+.cart-container .cart-wrapper .cart-items .cart-item img {
+  width: 80px;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cart-container .cart-wrapper .cart-items .cart-item .cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-container .cart-wrapper .cart-items .cart-item .cart-item-info h2 {
+  font-size: 20px;
+  font-weight: 400;
+}
+.cart-container .cart-wrapper .cart-items .cart-item .cart-item-info .cart-item-quantity {
+  border: 1px solid #000;
+  width: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.cart-container .cart-wrapper .cart-items .cart-item .cart-item-price {
+  font-size: 20px;
+  font-weight: 500;
+}
+.cart-container .cart-wrapper .cart-items .cart-item .remove-btn {
+  background-color: crimson;
+  padding: 8px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  max-width: 100px;
+}
+.cart-container .cart-wrapper .cart-checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cart-container .cart-wrapper .cart-checkbox .cart-total {
+  font-size: 32px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.cart-container .cart-wrapper .cart-checkbox .checkout-btn {
+  background-color: #273ea1;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: bold;
+  border-radius: 5px;
+  max-width: 150px;
+  cursor: pointer;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -141,4 +337,85 @@ body {
   max-width: 1070px;
   width: 100%;
   margin: auto;
+}
+
+.card {
+  width: 330px;
+  height: 80px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  background-color: #ffffff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.wave {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -31px;
+  top: 32px;
+  width: 80px;
+  fill: rgba(252, 12, 12, 0.2274509804);
+}
+
+.icon-container {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(252, 12, 12, 0.2823529412);
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.icon {
+  width: 17px;
+  height: 17px;
+  color: #d10d0d;
+}
+
+.message-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.message-text,
+.sub-text {
+  margin: 0;
+  cursor: default;
+}
+
+.message-text {
+  color: #d10d0d;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #555;
+}
+
+.cross-icon {
+  width: 18px;
+  height: 18px;
+  color: #555;
+  cursor: pointer;
+}
+
+.message-text-container a {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #d10d0d;
 }/*# sourceMappingURL=style.css.map */
