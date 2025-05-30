@@ -316,6 +316,11 @@ header div #cart-icon::after {
   max-width: 150px;
   cursor: pointer;
 }
+.cart-container .cart-wrapper .cart-checkbox .fee-title {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+}
 
 * {
   margin: 0;

@@ -1,4 +1,9 @@
-import { getFromLocalStorage, saveToLocalStorage } from "./helper.js";
+import {
+  getFromLocalStorage,
+  renderCartTotal,
+  saveToLocalStorage,
+  updateCartIcon,
+} from "./helper.js";
 import { renderCartItems } from "./ui.js";
 
 let cart = getFromLocalStorage("cart");
@@ -31,6 +36,8 @@ const addToCart = (e, products) => {
   setTimeout(() => {
     e.target.textContent = "Add to cart";
   }, 2000);
+
+  updateCartIcon(cart);
 };
 
 const removeFromCart = (e) => {
@@ -43,6 +50,10 @@ const removeFromCart = (e) => {
     saveToLocalStorage("cart", cart);
 
     renderCartItems(cart);
+
+    updateCartIcon(cart);
+
+    renderCartTotal(cart);
   }
 };
 
@@ -58,6 +69,10 @@ const onQuantitiyChange = (e) => {
   } else {
     removeFromCart(e);
   }
+
+  updateCartIcon(cart);
+
+  renderCartTotal(cart);
 };
 
 export { addToCart, removeFromCart, onQuantitiyChange };

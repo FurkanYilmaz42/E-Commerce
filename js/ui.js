@@ -5,6 +5,8 @@ const uiElements = {
   nav: document.querySelector("nav"),
   productList: document.querySelector(".product-container"),
   basketItemsContainer: document.querySelector(".cart-items"),
+  cartIcon: document.querySelector(".bi-bag-plus-fill"),
+  cartTotal: document.querySelector(".cart-total span"),
 };
 
 const renderProducts = (product, callBackFunction) => {
